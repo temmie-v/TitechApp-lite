@@ -11,7 +11,11 @@ import SwiftUI
 struct TitechApp_liteApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LectureList()
+                .onAppear {
+                    let lectures = loadLecture()
+                    print(lectures)
+                }
         }
     }
 }

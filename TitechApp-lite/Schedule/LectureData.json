@@ -1,0 +1,65 @@
+[
+    {
+        "name": "力学1",
+        "description": "Week 1 Description",
+        "start_time": "09:00",
+        "end_time": "10:30",
+        "place": "W222",
+        "information": [
+            {
+                "topic": "アナウンスメント",
+                "detail": "フォーラム"
+            },
+            {
+                "topic": "講義スライド",
+                "detail": "ファイル"
+            },
+            {
+                "topic": "zoom録画",
+                "detail": "URL"
+            }
+        ]
+    },
+    {
+        "name": "電磁気学2",
+        "description": "Week 2 Description",
+        "start_time": "09:00",
+        "end_time": "10:30",
+        "place": "W222",
+        "information": [
+            {
+                "topic": "アナウンスメント",
+                "detail": "フォーラム"
+            },
+            {
+                "topic": "講義スライド",
+                "detail": "ファイル"
+            },
+            {
+                "topic": "zoom録画",
+                "detail": "URL"
+            }
+        ]
+    },
+    {
+        "name": "化学3",
+        "description": "Week 3 Description",
+        "start_time": "16:15",
+        "end_time": "17:55",
+        "place": "W222",
+        "information": [
+            {
+                "topic": "アナウンスメント",
+                "detail": "フォーラム"
+            },
+            {
+                "topic": "講義スライド",
+                "detail": "ファイル"
+            },
+            {
+                "topic": "zoom録画",
+                "detail": "URL"
+            }
+        ]
+    }
+]
