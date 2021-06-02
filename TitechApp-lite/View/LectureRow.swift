@@ -13,15 +13,15 @@ struct LectureRow: View {
     var body: some View {
         HStack {
             HStack {
-                VStack(alignment: .center, spacing: 10) {
-                    Text(lecture.start_time)
+                VStack(alignment: .center, spacing: 12) {
+                    Text(lecture.startTime)
                         .font(.subheadline)
-                    Text(lecture.end_time)
+                    Text(lecture.endTime)
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                     
                 }
-                VStack(alignment: .leading, spacing: 10) {
+                VStack(alignment: .leading, spacing: 12) {
                     Text(lecture.name)
                     Text(lecture.description)
                         .font(.subheadline)
@@ -30,8 +30,7 @@ struct LectureRow: View {
             }
             Spacer()
             Text(lecture.place)
-                .foregroundColor(.green)
-            Divider()
+                .foregroundColor(themeColor)
         }
         .padding()
     }

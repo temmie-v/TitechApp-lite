@@ -11,33 +11,26 @@ struct LectureInfo: View {
     var lecture: Lecture
 
     var body: some View {
-        VStack {
-            VStack {
-                let n = lecture.information.count
-                ForEach(0..<n) { num in
+        List (lecture.information) { info in
+            Rectangle()
+                .fill(themeColor)
+                .frame(width: 5, alignment: .leading)
+            HStack {
+                VStack(alignment: .leading, spacing: 10) {
                     HStack {
-                        VStack(alignment: .leading, spacing: 10) {
-                            HStack {
-                                Text(lecture.information[num].topic)
-                                Spacer()
-                            }
-                            
-                            HStack {
-                                Text(lecture.information[num].detail)
-                                    .font(.subheadline)
-                                    .foregroundColor(.secondary)
-                                Spacer()
-                            }
-                        }
+                        Text(info.topic)
+                        Spacer()
                     }
-                    if (n - 1) > num {
-                        Divider()
+                    HStack {
+                        Text(info.detail)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                        Spacer()
                     }
                 }
             }
-            Spacer()
         }
-        .padding()
+        .navigationTitle(lecture.name)
     }
 }
 

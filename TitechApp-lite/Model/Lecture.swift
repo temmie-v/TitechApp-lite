@@ -7,13 +7,15 @@
 
 import Foundation
 
-struct Lecture: Decodable {
+struct Lecture: Decodable, Identifiable {
+    let id: Int
     let name: String
     let description: String
-    let start_time: String
-    let end_time: String
+    let startTime: String
+    let endTime: String
     let place: String
-    struct Information: Decodable {
+    struct Information: Decodable, Identifiable {
+        let id: Int
         let topic: String
         let detail: String
     }
