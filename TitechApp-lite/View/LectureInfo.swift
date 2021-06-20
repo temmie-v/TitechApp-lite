@@ -11,24 +11,17 @@ struct LectureInfo: View {
     var lecture: Lecture
 
     var body: some View {
-        List (lecture.information) { info in
-            Rectangle()
-                .fill(themeColor)
-                .frame(width: 5, alignment: .leading)
-            HStack {
-                VStack(alignment: .leading, spacing: 10) {
-                    HStack {
-                        Text(info.topic)
-                        Spacer()
-                    }
-                    HStack {
-                        Text(info.detail)
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                        Spacer()
-                    }
+        List {
+            ForEach  (lecture.information) { information in
+                HStack {
+                    Rectangle()
+                        .fill(Color("AccentColor"))
+                        .frame(width: 6, height: 80, alignment: .leading)
+                        .listRowInsets(EdgeInsets())
+                    LectureInfoRow(information: information)
                 }
             }
+            .listRowInsets(EdgeInsets())
         }
         .navigationTitle(lecture.name)
     }

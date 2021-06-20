@@ -7,27 +7,28 @@
 
 import SwiftUI
 
-let themeColor = Color(red: 0.33, green: 0.83, blue: 0.77, opacity: 1)
-
 struct LectureList: View {
     var body: some View {
         NavigationView {
-            List (lectures) { lecture in
-                Rectangle()
-                    .fill(themeColor)
-                    .frame(width: 5, alignment: .leading)
-                HStack {
-                    LectureRow(lecture: lecture)
-                    NavigationLink(destination: LectureInfo(lecture: lecture)) {
-                        EmptyView()
+            List {
+                ForEach (lectures) { lecture in
+                    HStack {
+                        Rectangle()
+                            .fill(Color("AccentColor"))
+                            .frame(width: 6, height: 80, alignment: .leading)
+                            .listRowInsets(EdgeInsets())
+                        LectureRow(lecture: lecture)
+                        NavigationLink(destination: LectureInfo(lecture: lecture)) {
+                            EmptyView()
+                        }
+                        .frame(width: 0)
+                        .opacity(0)
                     }
-                    .frame(width: 0)
-                    .opacity(0)
                 }
+                .listRowInsets(EdgeInsets())
             }
             .navigationBarTitle("スケジュール", displayMode: .inline)
         }
-        .accentColor(themeColor)
     }
 }
 

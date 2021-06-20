@@ -30,7 +30,7 @@ struct LectureRow: View {
             }
             Spacer()
             Text(lecture.place)
-                .foregroundColor(themeColor)
+                .foregroundColor(Color("AccentColor"))
         }
         .padding()
     }
