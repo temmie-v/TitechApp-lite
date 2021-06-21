@@ -12,7 +12,6 @@ struct TitechApp_liteApp: App {
     init() {
         UINavigationBar.appearance().barTintColor = UIColor.white
         UINavigationBar.appearance().tintColor = UIColor(named: "AccentColor")
-        UINavigationBar.appearance().isTranslucent = false
         UIViewController.init().extendedLayoutIncludesOpaqueBars = true
     }
     
