@@ -9,9 +9,20 @@ import SwiftUI
 
 @main
 struct TitechApp_liteApp: App {
+    init() {
+        UINavigationBar.appearance().barTintColor = UIColor.white
+        UINavigationBar.appearance().tintColor = UIColor(named: "AccentColor")
+        UIViewController.init().extendedLayoutIncludesOpaqueBars = true
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LectureList()
+                .onAppear {
+                    let lectures = loadLecture()
+                    print(lectures)
+                }
         }
     }
 }
+
